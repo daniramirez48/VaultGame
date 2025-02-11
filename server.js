@@ -14,10 +14,10 @@ const session = require('express-session');
 const SQLiteStore = require('connect-sqlite3')(session);
 
 // Opciones para HTTPS
-const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
-};
+// const options = {
+//   key: fs.readFileSync('key.pem'),
+//   cert: fs.readFileSync('cert.pem'),
+// };
 app.use(express.json());
 // Configurar middleware
 app.use(cors());

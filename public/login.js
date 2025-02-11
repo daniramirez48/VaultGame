@@ -43,30 +43,36 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
-    
+
     const result = await response.json();
+    console.log('Resultado del login:', result);  //  Muestra el resultado en la consola
+
     if (result.success) {
       alert('Login exitoso!');
-      
+
       const openModalBtn = document.getElementById('open-modal');
       if (openModalBtn && result.name) {
         openModalBtn.textContent = `Bienvenido, ${result.name}`;
       }
+
       const logoutBtn = document.getElementById('logoutBtn');
       if (logoutBtn) {
-        logoutBtn.style.display('block');
+        logoutBtn.style.display = 'block';
       }
+
       const modal = document.getElementById('myModal');
-      if (modal)modal.classList.remove('active');
-      // window.location.href = '/';
+      if (modal) modal.classList.remove('active');
+
     } else {
       alert(result.error || 'Credenciales inválidas');
     }
-    
+
   } catch (error) {
+    console.error('Error en el login:', error); // Muestra el error en la consola
     alert('Error de conexión');
   }
 });
+
 
 document.getElementById('logoutBtn')?.addEventListener('click', async () => {
   try {
