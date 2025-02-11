@@ -1,4 +1,4 @@
-const https = require('https');
+const https = require('http');
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const db = require('./database'); // Archivo de conexión a la base de datos
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002; // Asegurar que usa el puerto de Render
 const saltRounds = 10; // 🔹 Agregado para bcrypt
 
 const session = require('express-session');
@@ -179,10 +179,8 @@ app.get('/logout', (req, res) => {
 });
 
 // Iniciar servidor HTTPS
-https.createServer(options, app).listen(port, () => {
-  console.log(`Servidor HTTPS corriendo en https://localhost:${port}`);
-}).on('error', (err) => {
-  console.error('Error al iniciar el servidor HTTPS:', err);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor corriendo en http://0.0.0.0:${port}`);
 });
 
  
