@@ -179,7 +179,7 @@ app.get('/logout', (req, res) => {
 });
 
 // Iniciar servidor HTTPS
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`Servidor corriendo en http://0.0.0.0:${port}`);
 });
 
