@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login y Registro</title>
+  <link rel="stylesheet" href="login.css">
+  <!-- Incluye Google Fonts y Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <!-- Formulario de Login -->
+      <div class="login-form">
+        <h2>Iniciar Sesión</h2>
+        <form>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Usuario" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" required>
+          </div>
+          <button type="submit">Ingresar</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="#" id="show-register">Regístrate</a></p>
+      </div>
+      
+      <!-- Imagen central decorativa -->
+      <img src="/img/Doom_Slayer_from_the_game_DOOM-removebg-preview.png" alt="Imagen decorativa" class="middle-image move-right">
+      
+      <!-- Formulario de Registro -->
+      <div class="register-form">
+        <h2>Registro</h2>
+        <form>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nombre completo" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Correo electrónico" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Confirmar contraseña" required>
+          </div>
+          <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Inicia Sesión</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Toggle entre los formularios de login y registro
+// document.getElementById('login-toggle').addEventListener('click', () => {
+//   document.getElementById('login-form').style.display = 'block';
+//   document.getElementById('register-form').style.display = 'none';
+// });
+
+// document.getElementById('register-toggle').addEventListener('click', () => {
+//   document.getElementById('register-form').style.display = 'block';
+//   document.getElementById('login-form').style.display = 'none';
+// });
+    // Seleccionar elementos de formularios e imagen central
+    const loginForm = document.querySelector('.login-form');
+    const registerForm = document.querySelector('.register-form');
+    const showRegister = document.getElementById('show-register');
+    const showLogin = document.getElementById('show-login');
+    const middleImage = document.querySelector('.middle-image');
+
+    // Al hacer clic en "Regístrate"
+    showRegister.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.add('slide-left');
+      registerForm.classList.add('slide-right');
+      // Mueve la imagen hacia la izquierda
+      middleImage.classList.remove('move-right');
+      middleImage.classList.add('move-left');
+    });
+
+    // Al hacer clic en "Inicia Sesión"
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.remove('slide-left');
+      registerForm.classList.remove('slide-right');
+      // Mueve la imagen hacia la derecha (posición original)
+      middleImage.classList.remove('move-left');
+      middleImage.classList.add('move-right');
+    });
+  </script>
+</body>
+</html>

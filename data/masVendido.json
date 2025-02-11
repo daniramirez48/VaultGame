@@ -1,0 +1,148 @@
+ {
+  "loMasVendido":
+  [
+    {
+      "id": 9,
+      "title": "Call of Duty Black Ops 6 (PS5)",
+      "rating": {
+        "stars": "★★★★★",
+        "reviews": 250
+      },
+      "images": {
+        "main": "/img/Bo6Ps5/call-of-duty-black-ops-6-ps5.jpg",
+        "gallery": [
+          "/img/Bo6Ps5/call-of-duty-black-ops-6-ps5-1.jpg",
+          "/img/Bo6Ps5/call-of-duty-black-ops-6-ps5-2.jpg"
+        ]
+      },
+      "pricing": {
+        "original_price": "73.32€",
+        "discount_price": "65.99€",
+        "discount_percentage": "-10%"
+      },
+      "platforms": ["PS5"],
+      "description": "La última entrega de la saga Call of Duty con nuevas misiones y gráficos impresionantes.",
+      "features": [
+        "Modo campaña intenso y cinemático.",
+        "Modo multijugador con mapas y modos nuevos.",
+        "Gráficos de nueva generación."
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Diablo 4",
+      "rating": {
+        "stars": "★★★★☆",
+        "reviews": 300
+      },
+      "images": {
+        "main": "/img/diabloXbox/diablo-4-xbox-one-xbox-series-x.jpg",
+        "gallery": [
+          "/img/diabloXbox/diablo-4-1.jpg",
+          "/img/diabloXbox/diablo-4-2.jpg"
+        ]
+      },
+      "pricing": {
+        "original_price": "106.65€",
+        "discount_price": "79.99€",
+        "discount_percentage": "-25%"
+      },
+      "platforms": ["Xbox One", "Xbox Series X"],
+      "description": "Explora el mundo oscuro de Santuario y enfréntate a Lilith en Diablo 4.",
+      "features": [
+        "Amplio mundo abierto con exploración libre.",
+        "Diversos modos de juego incluyendo cooperativo y PvP.",
+        "Personalización avanzada de personajes."
+      ]
+    },
+    {
+      "id": 11,
+      "title": "It Takes Two",
+      "rating": {
+        "stars": "★★★★★",
+        "reviews": 180
+      },
+      "images": {
+        "main": "/img/ItTakeTwoXbox/it-takes-two-xbox-one.jpg",
+        "gallery": [
+          "/img/ItTakeTwoXbox/it-takes-two-1.jpg",
+          "/img/ItTakeTwoXbox/it-takes-two-2.jpg"
+        ]
+      },
+      "pricing": {
+        "original_price": "55.54€",
+        "discount_price": "49.99€",
+        "discount_percentage": "-10%"
+      },
+      "platforms": ["Xbox One"],
+      "description": "Un juego de aventuras cooperativo donde solo juntos podrán superar los desafíos.",
+      "features": [
+        "Modo cooperativo obligatorio con mecánicas únicas.",
+        "Narrativa emocionante y conmovedora.",
+        "Variedad de escenarios y mecánicas de juego."
+      ]
+    },
+    {
+      "id": 12,
+      "title": "SpiderMan 2 (PS5)",
+      "rating": {
+        "stars": "★★★★★",
+        "reviews": 400
+      },
+      "images": {
+        "main": "/img/SpiderManPs5/marvel-s-spider-man-2-ps5....jpg",
+        "gallery": [
+          "/img/SpiderManPs5/marvel-s-spider-man-2-ps5....jpg",
+          "/img/SpiderManPs5/marvel-s-spider-man-2-ps5(1).jpg",
+          "/img/SpiderManPs5/marvel-s-spider-man-2-ps5(3).jpg",
+          "/img/SpiderManPs5/marvel-s-spider-man-2-ps5(2).jpg"
+        ]
+      },
+      "pricing": {
+        "original_price": "99.99€",
+        "discount_price": "89.99€",
+        "discount_percentage": "-10%"
+      },
+      "platforms": ["PS5"],
+      "description": "Vive la experiencia de ser SpiderMan en una historia llena de acción y emoción.",
+      "features": [
+        "Explora Nueva York con una jugabilidad fluida.",
+        "Nuevas habilidades y trajes para SpiderMan.",
+        "Modo historia con personajes icónicos de Marvel."
+      ],
+      "editions": [
+        {
+          "price": "44.19",
+          "price_eur": "44.19",
+          "retail": "60",
+          "name": "Marvel's Spider-Man 2",
+          "editionName": "Standard Edición - Europe",
+          "editionDetails": [
+            "Marvel's Spider-Man 2"
+          ],
+          "retailPrice": "60€",
+          "discountedPrice": "44.19€",
+          "discountPercent": "-26%",
+          "image": "https://gaming-cdn.com/images/products/13335/380x218/marvel-s-spider-man-2-pc-juego-steam-europe-cover.jpg?v=1738253756",
+          "link": "https://www.instant-gaming.com/es/pagos-13335-marvel-s-spider-man-2-pc-juego-steam-europe/"
+        },
+        {
+          "price": "52.49",
+          "price_eur": "52.49",
+          "retail": "70",
+          "name": "Marvel's Spider-Man 2 Digital Deluxe Edition",
+          "editionName": "Digital Deluxe Edition - Europe",
+          "editionDetails": [
+            "Marvel’s Spider-Man 2",
+            "Desbloqueo anticipado del traje de Caballero Araña",
+            "+5 puntos de habilidad"
+          ],
+          "retailPrice": "70€",
+          "discountedPrice": "52.49€",
+          "discountPercent": "-25%",
+          "image": "https://gaming-cdn.com/images/products/18620/380x218/marvel-s-spider-man-2-digital-deluxe-edition-digital-deluxe-edition-pc-juego-steam-europe-cover.jpg?v=1738253800"
+        }
+      ]
+    }
+  ]
+}

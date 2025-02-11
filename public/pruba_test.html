@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man 2 Ediciones</title>
+    <style>
+  /* Sección de Ediciones */
+.editionsSection {
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+}
+
+.containerEdiciones {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.edicionesTitle {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.edicionesSlider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjeta de Edición */
+.edicionCard {
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edicionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.edicionCard picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenedor de la información de la edición */
+.edicionInfo {
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.edicionName {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.edicionDetails {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.edicionDetails li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.edicionDetails li:before {
+  content: "✔";
+  color: #4caf50;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.edicionPrice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.edicionPrice .retailPrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.edicionPrice .discountedPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.edicionPrice .discountPercent {
+  font-size: 0.9rem;
+  color: #ff5722;
+}
+
+.edicionAction {
+  margin-top: auto;
+}
+
+.btnEdicion {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btnEdicion:hover {
+  background-color: #0056b3;
+}
+ </style>
+</head>
+<body>
+    <body>
+        <section class="editionsSection">
+            <div class="containerEdiciones">
+              <h2 class="edicionesTitle">Ediciones</h2>
+              <div class="edicionesSlider">
+                <!-- Tarjeta de Edición 1 -->
+                <div class="edicionCard" data-prodid="13335" data-price="44.19" data-price-eur="44.19" data-retail="60" data-name="Marvel's Spider-Man 2">
+                  <picture>
+                    <img src="https://gaming-cdn.com/images/products/13335/380x218/marvel-s-spider-man-2-pc-juego-steam-europe-cover.jpg?v=1738253756" 
+                         alt="Marvel's Spider-Man 2">
+                  </picture>
+                  <div class="edicionInfo">
+                    <h3 class="edicionName">Standard Edición - Europe</h3>
+                    <ul class="edicionDetails">
+                      <li>Marvel's Spider-Man 2</li>
+                      <!-- Puedes agregar más detalles aquí -->
+                    </ul>
+                    <div class="edicionPrice">
+                      <span class="retailPrice">60€</span>
+                      <span class="discountedPrice">44.19€</span>
+                      <span class="discountPercent">-26%</span>
+                    </div>
+                    <div class="edicionAction">
+                      <a href="https://www.instant-gaming.com/es/pagos-13335-marvel-s-spider-man-2-pc-juego-steam-europe/" 
+                         class="btnEdicion" rel="nofollow">
+                        Añadir a la cesta
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Tarjeta de Edición 2 -->
+                <div class="edicionCard" data-prodid="18620" data-price="52.49" data-price-eur="52.49" data-retail="70" data-name="Marvel's Spider-Man 2 Digital Deluxe Edition">
+                  <picture>
+                    <img src="https://gaming-cdn.com/images/products/18620/380x218/marvel-s-spider-man-2-digital-deluxe-edition-digital-deluxe-edition-pc-juego-steam-europe-cover.jpg?v=1738253800" 
+                         alt="Digital Deluxe Edition">
+                  </picture>
+                  <div class="edicionInfo">
+                    <h3 class="edicionName">Digital Deluxe Edition - Europe</h3>
+                    <ul class="edicionDetails">
+                      <li>Marvel’s Spider-Man 2</li>
+                      <li>Desbloqueo anticipado del traje de Caballero Araña</li>
+                      <li>+5 puntos de habilidad</li>
+                    </ul>
+                    <div class="edicionPrice">
+                      <span class="retailPrice">70€</span>
+                      <span class="discountedPrice">52.49€</span>
+                      <span class="discountPercent">-25%</span>
+                    </div>
+                    <div class="edicionAction">
+                      <a href="https://www.instant-gaming.com/es/pagos-18620-marvel-s-spider-man-2-digital-deluxe-edition-digital-deluxe-edition-pc-juego-steam-europe/" 
+                         class="btnEdicion" rel="nofollow">
+                        Añadir a la cesta
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Agrega más tarjetas según sea necesario -->
+              </div>
+            </div>
+          </section>
+          
+</body>
+</html>

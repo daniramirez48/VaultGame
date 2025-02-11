@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal_style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="header-Footer.css">
+    <!-- Incluir Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header-container">
+        <div class="logo">
+            <a href="index.html"><img src="/img/logo.png" alt="Logo Tienda"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#tendencias"">Tendencias</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Próximos Lanzamientos</a></li>
+                <li><a href="#">Soporte</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos...">
+            <button>Buscar</button>
+        </div>
+        <div class="user-actions">
+            <a href="#" id="open-modal" class="user-link"><i class="fas fa-user"></i> Iniciar Sesión</a>
+            <button id="logoutBtn" style="display: none;">Cerrar Sesión</button>
+            <a href="carrito.html" class="cart-link">
+                <i class="fas fa-shopping-cart"></i> Carrito 
+                <span id="cart-count">0</span>
+            </a>
+            
+        </div>
+        <div class="hamburger-container">
+            <a href="#" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul id="consolas-menu" class="submenu">
+                <li><a href="#">PC</a></li>
+                <li><a href="#">PlayStation</a></li>
+                <li><a href="#">XBOX</a></li>
+                <li><a href="#">Nintendo</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="main-banner">
+        <h2 class="banner-heading">Ofertas increíbles en tus juegos favoritos</h2>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="/img/banner/Astro-Bot.webp" alt="Astro-Bot">
+                    <div class="carousel-caption">
+                        <p class="discount">Descuento: 20%</p>
+                        <a href="#" class="btn carousel-btn">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/diabloXbox/diablowall.jpg" alt="Diablo 4">
+                    <div class="carousel-caption">
+                        <h3>Diablo 4</h3>
+                        <p class="discount">Descuento: 15%</p>
+                        <a href="#" class="btn carousel-btn">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/xbox_game_pass_plan_familiar.webp" alt="GamePass">
+                    <div class="carousel-caption">
+                        <h3>Game Pass ultimate</h3>
+                        <p class="discount">Descuento: 15%</p>
+                        <a href="#" class="btn carousel-btn">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/banner/Call-of-Duty-Black-Ops-6.jpg" alt="Call of Duty">
+                    <div class="carousel-caption">
+                        <h3>Call of Duty</h3>
+                        <p class="discount">Descuento: 25%</p>
+                        <a href="#" class="btn carousel-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button  class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" id="containerTendencia">
+            <a href="#" class="tendencias-link"><h2>Tendencias</h2></a>
+            <div class="tendencias" id="tendencias">
+                <!-- Aquí se generarán los juegos dinámicamente -->
+            </div>
+        </div>
+        
+    <!-- Sección de Productos -->
+    <section class="products">
+        <div class="container">
+            <h2>MAS VENDIDO DEL MES</h2>
+            <div class="product-grid">
+                <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+            </div>
+        </div>
+        <div class="container" id="containerTendencia">
+            <a href="#" class="tendencias-link"><h2>Tarjeta de regalos</h2></a>
+            <div class="tendencias">
+                <div class="juego">
+                    <a href=""><img src="/img/gamepass.jpg" alt="gamepass"></a>
+                    <h3>GamePass 3 meses</h3>
+                    <p><span class="discount">-10% </span>60.89€</p>
+                    <button class="btnReserva">VER MAS</button>
+                </div>
+                <div class="juego">
+                    <a href=""><img src="/img/nitendo.jpg" alt="NintendoGiftCard"></a>
+                    <h3>Nitendo Eshop</h3>
+                    <p><span class="discount">-5% </span>20.99€</p>
+                    <button class="btnReserva">VER MAS</button>
+                </div>
+                <div class="juego">
+                    <a href=""><img src="/img/steam.jpg" alt="SteamGift"></a>
+                    <h3>Steam GiftCard</h3>
+                    <p><span class="discount">-2% </span>39.99€</p>
+                    <button class="btnReserva">VER MAS</button>
+                </div>
+                <div class="juego">
+                    <a href=""><img src="/img/tarjetaPS.jpg" alt="PsPlusGift"></a>
+                    <h3>PlayStation Store</h3>
+                    <p><span class="discount">-8% </span>15.99€</p>
+                    <button class="btnReserva">VER MAS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="containerReserva">
+        <a href="" class="reserva-link"><h2>Reservas</h2></a>
+        <div class="reservas">
+            <div class="juegoNew">
+                <img src="/img/kingdom-come-deliverance-ii-gold-edition-gold.jpg" alt="Kingdom Come: Deliverance II Gold Edition">
+                <div class="info">
+                    <h3>Kingdom Come: Deliverance II Gold Edition</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-30%</span>
+                        <span class="price">55.79€</span>
+                        <span class="date">En 7 días</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+            <div class="juegoNew">
+                <img src="/img/monster-hunter-wilds.jpg" alt="Monster Hunter Wilds">
+                <div class="info">
+                    <h3>Monster Hunter Wilds</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-31%</span>
+                        <span class="price">47.99€</span>
+                        <span class="date">28 febrero 2025</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+            <div class="juegoNew">
+                <img src="/img/s-civilization-vii-founders-.jpg" alt="Sid Meier's Civilization VII Founders Edition">
+                <div class="info">
+                    <h3>Sid Meier's Civilization VII Founders Edition</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-28%</span>
+                        <span class="price">93.19€</span>
+                        <span class="date">En 14 días</span>
+                        <span class="acceso">+ 5 DÍAS ACCESO ANTICIPADO</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+            <div class="juegoNew">
+                <img src="/img/the-last-of-us-part-ii.jpg" alt="The Last of Us Part II Remastered">
+                <div class="info">
+                    <h3>The Last of Us Part II Remastered</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-27%</span>
+                        <span class="price">36.49€</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+            <div class="juegoNew">
+                <img src="/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-cover.jpg" alt="Assassin's Creed Shadows Deluxe Edition">
+                <div class="info">
+                    <h3>Assassin's Creed Shadows Deluxe Edition</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-27%</span>
+                        <span class="price">65.99€</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+            <div class="juegoNew">
+                <img src="/img/doom-the-dark-ages/doom-the-dark-ages.jpg" alt="Doom: The Dark Ages Premium Edition">
+                <div class="info">
+                    <h3>Doom: The Dark Ages Premium Edition</h3>
+                    <div class="detalles">
+                        <span class="discountNew">-23%</span>
+                        <span class="price">84.99€</span>
+                        <span class="acceso">+ 2 DÍAS ACCESO ANTICIPADO</span>
+                    </div>
+                    <a href="" class="btnReserva">Reserva ya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="separator recommended"></div>
+    <div class="partners-container">
+        <div class="container-">
+            <div class="content">
+                <picture>
+                    <img src="/img/domm banner.png" loading="lazy" alt="avatar" class="partner-avatar-es">
+                </picture>
+                <div class="text">
+                    <div class="text">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    <div class="comment">GameVault es una plataforma increíble para comprar tus juegos de PC, PlayStation, Xbox y Switch más baratos. ¡Con entrega inmediata 24/7, juega al instante al precio más bajo!<br></div>
+                    <a href="" class="button">
+                        1,534,521 reseñas de usuarios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="separator recommended"></div>
+
+    <section class="reviews">
+        <div class="containerReview">
+            <h2>Reseñas de Usuarios</h2>
+            <div class="review">
+                <p>"Excelente servicio y precios inmejorables."</p>
+                <span>- Rocio44</span>
+            </div>
+            <div class="review">
+                <p>"Entrega instantánea y soporte eficiente."</p>
+                <span>- Juan</span>
+            </div>
+            <div class="review">
+                <p>"La mejor tienda de videojuegos en línea."</p>
+                <span>- thepro666</span>
+            </div>
+        </div>
+    </section>  
+    <div class="categories-container">
+        <div class="headline visual-compensation">
+            <h2>Categorías</h2>
+            <a class="button button-secondary show-more-categories" href="#">Ver todo</a>
+        </div>
+        <div class="listing-items higher listing-categories listing-slider">
+            <!-- Lista de categorías -->
+            <a href="#" class="item category1 best" style="background-image: url('/img/Shooter.jpg');">
+                <div class="content-">
+                    <div class="name">Shooter</div>
+                    <div class="cover" style="background-image: url('/img/ShooterICon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category2 best" style="background-image: url('/img/arcadeIMG.jpg');">
+                <div class="content-">
+                    <div class="name">Arcade</div>
+                    <div class="cover" style="background-image: url('/img/ArcadeIcon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category4 best" style="background-image: url('/img/aventuraIMG.jpg');">
+                <div class="content-">
+                    <div class="name">Aventura</div>
+                    <div class="cover" style="background-image: url('/img/AventuraICon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category8" style="background-image: url('/img/carreraIMG.jpg');">
+                <div class="content-">
+                    <div class="name">Carreras</div>
+                    <div class="cover" style="background-image: url('/img/carreraIcon.webp');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category17 best" style="background-image: url('/img/EstrategiaIMG.jpg');">
+                <div class="content-">
+                    <div class="name">Estrategia</div>
+                    <div class="cover" style="background-image: url('/img/estrategiaIcon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category11 best" style="background-image: url('/img/RPG.jpg');">
+                <div class="content-">
+                    <div class="name">RPG</div>
+                    <div class="cover" style="background-image: url('/img/rpgIcon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category15" style="background-image: url('/img/Simulador.jpg');">
+                <div class="content-">
+                    <div class="name">Simulación</div>
+                    <div class="cover" style="background-image: url('/img/simulatorICon.webp');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category47 best" style="background-image: url('/img/unjugador.jpg');">
+                <div class="content-">
+                    <div class="name">Un solo jugador</div>
+                    <div class="cover" style="background-image: url('/img/unJugadorIcon.png');"></div>
+                </div>
+            </a>
+            <a href="#" class="item category47 best" style="background-image: url('/img/indieIMG.jpg');">
+                <div class="content-">
+                    <div class="name">Indie</div>
+                    <div class="cover" style="background-image: url('/img/indieICON.webp');"></div>
+                </div>
+            </a>
+        </div>
+    </div>      
+        <div id="notifications-container"></div>
+    </section>
+    <div class="actions-footer ">
+        <div class="subscribe subscription-div">
+            <div class="text">
+               <i class="fa-solid fa-paper-plane"></i>
+                <div class="lines">
+                    <span class="h3">¡No te pierdas ninguna oferta o promoción!</span>
+                    <span class="details">¡Y sé el primero en recibir nuestras ofertas privadas, newsletters y promociones de la semana!</span>
+                </div>
+            </div>
+            <a href="#" class="button">
+                    ¡Suscríbete!
+            </a>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    <!-- Botón para cerrar el modal -->
+    <span class="close-btn" id="close-modal">&times;</span>
+
+    <!-- Contenedor de formularios e imagen -->
+    <div class="forms-wrapper" id="formsWrapper">
+      <!-- Panel de Login (por defecto visible) -->
+      <div class="form-panel login-panel">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" id="noAuth">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="login-username" name="username" placeholder="Usuario" required>
+    
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
+          </div>
+          <button type="submit">Ingresar</button>
+        </form>
+        <div class="toggle-link">
+          ¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a>
+        </div>
+      </div>
+
+      <!-- Panel de Registro (inicialmente oculto) -->
+      <div class="form-panel register-panel">
+        <h2>Registro</h2>
+        <form id="registerForm">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name"  placeholder="Nombre completo" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+          </div>
+          <!-- <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="passwordConfirm" placeholder="Confirmar Contraseña" required>
+          </div> -->
+          <button type="submit">Registrarse</button>
+        </form>
+        <div class="toggle-link">
+          ¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia Sesión</a>
+        </div>
+      </div>
+
+      <!-- Contenedor de la imagen decorativa -->
+      <div class="image-container">
+        <img src="/img/Doom_Slayer_from_the_game_DOOM-removebg-preview.png" alt="Imagen decorativa">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+        <div class="containerFooter">
+         <div class="row">
+           <div class="footer-col">
+             <h4>GameVault</h4>
+             <ul>
+                <li><a href="#">sobre nosotros</a></li>
+                <li><a href="#">nuestros servicios</a></li>
+                <li><a href="#">política de privacidad</a></li>
+                <li><a href="#">programa de afiliados</a></li>
+            </ul>
+            </div>
+            <div class="footer-col">
+                <h4>obtener ayuda</h4>
+                <ul>
+                    <li><a href="#">preguntas frecuentes</a></li>
+                    <li><a href="#">envíos</a></li>
+                    <li><a href="#">devoluciones</a></li>
+                    <li><a href="#">estado del pedido</a></li>
+                    <li><a href="#">opciones de pago</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>            
+           </div>
+         </div>
+     </footer>
+    <script src="login.js"></script>
+    <script src="daniel_app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const consolasMenu = document.getElementById('consolas-menu');
+
+            hamburgerMenu.addEventListener('click', function() {
+                consolasMenu.classList.toggle('show');
+            });
+        });
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    //   
+
+// // Función para cargar los productos dinámicamente
+// document.addEventListener("DOMContentLoaded", async () => {
+//     try {
+//         const response = await fetch("masVendido.json"); // Asegúrate de que la ruta sea correcta
+//         const products = await response.json();
+
+//         const productGrid = document.querySelector(".product-grid"); // Seleccionamos el contenedor de productos
+//         productGrid.innerHTML = ""; // Limpiamos el contenedor antes de agregar los productos
+
+//         products.forEach(product => {
+//             const productElement = document.createElement("div");
+//             productElement.classList.add("product");
+
+//             productElement.innerHTML = `
+//                 <a href="#"><img src="${product.images.main}" alt="${product.title}"></a>
+//                 <h3>${product.title}</h3>
+//                 <p class="price">${product.pricing.discount_price} <span class="discount">${product.pricing.discount_percentage}</span></p>
+//                 <a href="#" class="btn">Agregar al Carrito</a>
+//             `;
+
+//             productGrid.appendChild(productElement);
+//         });
+
+//     } catch (error) {
+//         console.error("Error al cargar los productos:", error);
+//     }
+// });
+
+        
+    </script>
+
+</body>
+</html>

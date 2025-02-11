@@ -1,0 +1,163 @@
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    /* Ocultar el carrusel en móviles */
+    .carousel {
+        display: none;
+    }
+
+    /* Ajustar banner principal */
+    .main-banner {
+        padding: 15px;
+    }
+
+    /* Header - Ajustar elementos */
+    .header-container {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input:focus {
+        width: 100%;
+    }
+
+    /* Menú de tendencias */
+    .juego {
+        width: 100%;
+        height: auto;
+    }
+
+    .media-container {
+        height: 250px;
+    }
+
+    /* Sección de reservas */
+    .juegoNew {
+        width: 100%;
+    }
+
+    /* Productos destacados */
+    .product {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    /* Sección partners */
+    .partners-container .container- {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .partners-container .content picture img {
+        height: 300px;
+    }
+
+    /* Reviews */
+    .review {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Footer */
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Menú hamburguesa */
+    #consolas-menu {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+
+    /* Product page */
+    .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-media {
+        width: 100%;
+    }
+
+    .product-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes más específicos para móviles pequeños */
+    .header-container .logo img {
+        height: 40px;
+    }
+
+    .user-actions a {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    /* Textos grandes */
+    .banner-heading {
+        font-size: 1.5em;
+        margin-top: 6rem;
+    }
+
+    /* Sección de tendencias */
+    #containerTendencia {
+        padding: 1em;
+    }
+
+    /* Botones */
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* Product page */
+    .product-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .price-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Animaciones suaves para elementos interactivos */
+@media (hover: hover) {
+    .juego:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Optimización para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .juego {
+        width: calc(50% - 20px);
+    }
+
+    .product-media {
+        max-width: 50%;
+    }
+
+    .partners-container .content {
+        flex-direction: column;
+    }
+}

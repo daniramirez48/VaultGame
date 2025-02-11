@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="version.css">
+    <link rel="stylesheet" href="header-Footer.css">
+    <link rel="stylesheet" href="product.css">
+    <!-- Incluir Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header-container">
+        <div class="logo">
+            <a href="index.html"><img src="/img/logo.png" alt="Logo Tienda"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Tendencias</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Próximos Lanzamientos</a></li>
+                <li><a href="#">Soporte</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos...">
+            <button>Buscar</button>
+        </div>
+        <div class="user-actions">
+            <a href="#" class="user-link"><i class="fas fa-user"></i> Iniciar Sesión</a>
+            <a href="carrito.html" class="cart-link">
+                <i class="fas fa-shopping-cart"></i> Carrito 
+                <span id="cart-count">0</span>
+            </a>
+            
+        </div>
+        <div class="hamburger-container">
+            <a href="#" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul id="consolas-menu" class="submenu">
+                <li><a href="#">PC</a></li>
+                <li><a href="#">PlayStation</a></li>
+                <li><a href="#">XBOX</a></li>
+                <li><a href="#">Nintendo</a></li>
+            </ul>
+        </div>
+    </header>
+    
+  <!-- Detalle del Producto -->
+<section class="product-detail">
+    <div class="containerProduct">
+        <div class="product-header">
+            <h1 id="product-title"></h1>
+        </div>
+        <div class="product-content">
+            <div class="product-media">
+                <img id="product-image" src="" alt="">
+                <div class="product-gallery" id="product-gallery"></div>
+            </div>
+            <div class="product-info">
+                <div class="price-section">
+                    <span id="original-price"></span>
+                    <span id="discount-price"></span>
+                    <span id="discount-"></span>
+                </div>
+                <div class="platforms" id="platforms"></div>
+                <div class="actions-">
+                    <button class="btn-buy">Comprar Ahora</button>
+                    <button class="btn-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-description">
+                    <h2>Descripción del Producto</h2>
+                    <p id="product-description"></p>
+                </div>
+                <div class="product-features">
+                    <h2>Características Principales</h2>
+                    <ul id="product-features"></ul>
+                </div>
+                <div class="product-rating">
+                    <span id="stars"></span>
+                    <span id="reviews-"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="editionsSection">
+        <div class="containerEdiciones">
+          <h2 class="edicionesTitle">Ediciones</h2>
+          <div class="edicionesSlider">
+            <!-- Aquí se insertarán dinámicamente las tarjetas de edición -->
+          </div>
+        </div>
+      </section>
+</section>
+        <div class="container" id="containerTendencia">
+            <a href="#" class="tendencias-link"><h2>Producto similares</h2></a>
+            <div class="tendencias" id="tendencias">
+                <!-- Aquí se generarán los juegos dinámicamente -->
+            </div>
+        </div>
+        <section class="reviewsGame">
+            <img src="/img/doomSlayerComment.png" alt="">
+            <div class="reviewsContainer">
+                <h2>Reseñas de Usuarios</h2>
+        
+                <div class="review_game">
+                    <p>"Excelente servicio y precios inmejorables."</p>
+                    <span>- Rocio44</span>
+                </div>
+                <div class="review_game">
+                    <p>"Entrega instantánea y soporte eficiente."</p>
+                    <span>- Juan</span>
+                </div>
+                <div class="review_game">
+                    <p>"La mejor tienda de videojuegos en línea."</p>
+                    <span>- thepro666</span>
+                </div>
+        
+                <!-- Botón para abrir el formulario -->
+                <button class="btnValoracion" id="toggleReviewBtn">Valorar</button>
+            </div>
+        </section>
+        
+        <!-- Contenedor flotante del formulario -->
+        <div class="review_overlay" id="reviewOverlay">
+            <div class="review_form">
+                <button class="closeReview" id="closeReviewBtn">&times;</button>
+                <h3>Escribe tu reseña</h3>
+                <textarea id="reviewText" placeholder="Escribe tu reseña aquí..."></textarea>
+        
+                <!-- Valoración por estrellas -->
+                <div class="star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+        
+                <button class="btnEnviar" id="submitReview">Enviar</button>
+                <button class="btnEditar" id="editReview" style="display: none;">Editar</button>
+            </div>
+        </div>
+             
+
+            <div id="notifications-container"></div>
+            <div class="actions-footer ">
+                <div class="subscribe subscription-div">
+                    <div class="text">
+                       <i class="fa-solid fa-paper-plane"></i>
+                        <div class="lines">
+                            <span class="h3">¡No te pierdas ninguna oferta o promoción!</span>
+                            <span class="details">¡Y sé el primero en recibir nuestras ofertas privadas, newsletters y promociones de la semana!</span>
+                        </div>
+                    </div>
+                    <a href="#" class="button">
+                            ¡Suscríbete!
+                    </a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="containerFooter">
+                 <div class="row">
+                   <div class="footer-col">
+                     <h4>GameVault</h4>
+                     <ul>
+                        <li><a href="#">sobre nosotros</a></li>
+                        <li><a href="#">nuestros servicios</a></li>
+                        <li><a href="#">política de privacidad</a></li>
+                        <li><a href="#">programa de afiliados</a></li>
+                    </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>obtener ayuda</h4>
+                        <ul>
+                            <li><a href="#">preguntas frecuentes</a></li>
+                            <li><a href="#">envíos</a></li>
+                            <li><a href="#">devoluciones</a></li>
+                            <li><a href="#">estado del pedido</a></li>
+                            <li><a href="#">opciones de pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                      </div>            
+                   </div>
+                 </div>
+             </footer>
+
+</body>
+            
+<script src="product.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggleReviewBtn");
+    const reviewOverlay = document.getElementById("reviewOverlay");
+    const closeBtn = document.getElementById("closeReviewBtn");
+    const reviewText = document.getElementById("reviewText");
+    const submitBtn = document.getElementById("submitReview");
+    const editBtn = document.getElementById("editReview");
+    const stars = document.querySelectorAll(".star");
+    const reviewsContainer = document.querySelector(".reviewsContainer");
+    let selectedRating = 0;
+
+    // Mostrar el formulario al hacer clic en "Valorar"
+    toggleBtn.addEventListener("click", () => {
+        reviewOverlay.classList.add("active");
+    });
+
+    // Cerrar el formulario
+    closeBtn.addEventListener("click", () => {
+        reviewOverlay.classList.remove("active");
+    });
+
+    // Selección de estrellas
+    stars.forEach(star => {
+        star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+            stars.forEach(s => s.classList.remove("selected"));
+            star.classList.add("selected");
+        });
+    });
+
+    // Enviar reseña
+    submitBtn.addEventListener("click", () => {
+        if (!reviewText.value.trim()) {
+            alert("Por favor, escribe una reseña.");
+            return;
+        }
+        if (selectedRating === 0) {
+            alert("Por favor, selecciona una valoración.");
+            return;
+        }
+
+        // Crear nueva reseña
+        const newReview = document.createElement("div");
+        newReview.classList.add("review_game");
+        newReview.innerHTML = `
+            <p>"${reviewText.value}"</p>
+            <span>- Usuario Anónimo</span>
+            <div class="user-rating">⭐ ${selectedRating} / 5</div>
+        `;
+
+        // Insertar la reseña DESPUÉS del título "Reseñas de Usuarios"
+        reviewsContainer.insertBefore(newReview, reviewsContainer.children[1]);
+
+        // Limpiar formulario y ocultarlo
+        reviewText.value = "";
+        stars.forEach(s => s.classList.remove("selected"));
+        selectedRating = 0;
+        reviewOverlay.classList.remove("active");
+
+        // Mostrar botón de edición
+        editBtn.style.display = "block";
+        submitBtn.style.display = "none";
+    });
+
+    // Editar comentario
+    editBtn.addEventListener("click", () => {
+        reviewText.value = document.querySelector(".review_game:first-of-type p").textContent.replace(/"/g, "");
+        reviewOverlay.classList.add("active");
+        submitBtn.style.display = "block";
+        editBtn.style.display = "none";
+    });
+});
+
+</script>
+</html>
