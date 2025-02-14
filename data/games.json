@@ -1,349 +1,366 @@
 {
-  "games": [
+    "games": [
       {
-          "id": 1,
-          "title": "Doom the Dark Ages",
-          "rating": {
-              "stars": "★★★★★",
-              "reviews": 200
-          },
-          "images": {
-              "main": "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg",
-              "gallery": [
-                  "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg",
-                  "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-1.jpg",
-                  "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-2.jpg",
-                  "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-3.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "99.99€",
-              "discount_price": "89.99€",
-              "discount_percentage": "-10%"
-          },
-          "platforms": ["Windows", "PlayStation", "Xbox"],
-          "description": "Doom the Dark Ages es un juego de acción en primera persona que te sumerge en un mundo oscuro y lleno de desafíos.",
-          "features": [
-              "Gráficos de última generación.",
-              "Combate intenso y rápido.",
-              "Modo multijugador competitivo.",
-              "Historia épica y envolvente."
-          ],
-          "video": {
-              "mp4": "/videos/doom-the-dark-ages-premium-edition-acceso-anticipado-premium-edition-pc-juego-steam-preview.mp4",
-              "webm": "/videos/doom-the-dark-ages-premium-edition-acceso-anticipado-premium-edition-pc-juego-steam-preview.webm"
-          },
-          "editions": [
-            {
-              "price": "44.19",
-              "price_eur": "44.19",
-              "retail": "60",
-              "name": "Doom dark ages",
-              "editionName": "Standard Edición - Europe",
-              "editionDetails": [
-                "Doom: The Dark Ages"
-              ],
-              "retailPrice": "99.99€",
-              "discountedPrice": "89.99€",
-              "discountPercent": "-26%",
-              "image": "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg"
-            },
-            {
-              "price": "52.49",
-              "price_eur": "52.49",
-              "retail": "70",
-              "name": "Doom dark ages",
-              "editionName": "Premium Edition - Europe",
-              "editionDetails": [
-                "Doom: The Dark Ages",
-                "Hasta 2 días de acceso anticipado",
-                "Libro digital de ilustraciones y banda sonora",
-                "Paquete de diseños Divinidad"
-              ],
-              "retailPrice": "70€",
-              "discountedPrice": "52.49€",
-              "discountPercent": "-15%",
-              "image": "/img/doom-the-dark-ages/doom-the-dark-ages.jpg"
-            }
+        "id": 1,
+        "title": "Doom the Dark Ages",
+        "rating": {
+          "stars": "★★★★★",
+          "reviews": 200
+        },
+        "images": {
+          "main": "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg",
+          "gallery": [
+            "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg",
+            "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-1.jpg",
+            "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-2.jpg",
+            "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-wallpaper-3.jpg"
           ]
-      },
-      {
-          "id": 2,
-          "title": "Path Of Exile 2",
-          "rating": {
-              "stars": "★★★★☆",
-              "reviews": 180
+        },
+        "pricing": {
+          "original_price": "99.99€",
+          "discount_price": "89.99€",
+          "discount_percentage": "-10%"
+        },
+        "platforms": ["Windows", "PlayStation", "Xbox"],
+        "description": "Doom the Dark Ages es un juego de acción en primera persona que te sumerge en un mundo oscuro y lleno de desafíos.",
+        "features": [
+          "Gráficos de última generación.",
+          "Combate intenso y rápido.",
+          "Modo multijugador competitivo.",
+          "Historia épica y envolvente."
+        ],
+        "video": {
+          "mp4": "/videos/doom-the-dark-ages-premium-edition-acceso-anticipado-premium-edition-pc-juego-steam-preview.mp4",
+          "webm": "/videos/doom-the-dark-ages-premium-edition-acceso-anticipado-premium-edition-pc-juego-steam-preview.webm"
+        },
+        "editions": [
+          {
+            "price": "44.19",
+            "price_eur": "44.19",
+            "retail": "60",
+            "name": "Doom dark ages",
+            "editionName": "Standard Edición - Europe",
+            "editionDetails": [
+              "Doom: The Dark Ages"
+            ],
+            "retailPrice": "99.99€",
+            "discountedPrice": "89.99€",
+            "discountPercent": "-26%",
+            "image": "/img/doom-the-dark-ages/doom-the-dark-ages-pc-juego-steam-cover.jpg"
           },
-          "images": {
-              "main": "/img/pathOfExile/path-of-exile-2-pc-juego-cover.jpg",
-              "gallery": [
-                    "/img/pathOfExile/path-of-exile-2-pc-juego-cover.jpg",
-                  "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-1.jpg",
-                  "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-2.jpg",
-                  "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-3.jpg",
-                  "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "99.99€",
-              "discount_price": "91.99€",
-              "discount_percentage": "-8%"
-          },
-          "platforms": ["Windows", "MacOS"],
-          "description": "Path Of Exile 2 es un RPG de acción que expande el universo del original con nuevas mecánicas y una historia emocionante.",
-          "features": [
-              "Sistema de habilidades complejo.",
-              "Mundo abierto lleno de secretos.",
-              "Modo cooperativo para hasta 6 jugadores.",
-              "Gráficos mejorados y efectos visuales impresionantes."
-          ],
-          "video": {
-              "mp4": "/videos/path-of-exile-2-pc-juego-preview.mp4",
-              "webm": "/videos/path-of-exile-2-pc-juego-preview.webm"
+          {
+            "price": "52.49",
+            "price_eur": "52.49",
+            "retail": "70",
+            "name": "Doom dark ages",
+            "editionName": "Premium Edition - Europe",
+            "editionDetails": [
+              "Doom: The Dark Ages",
+              "Hasta 2 días de acceso anticipado",
+              "Libro digital de ilustraciones y banda sonora",
+              "Paquete de diseños Divinidad"
+            ],
+            "retailPrice": "70€",
+            "discountedPrice": "52.49€",
+            "discountPercent": "-15%",
+            "image": "/img/doom-the-dark-ages/doom-the-dark-ages.jpg"
           }
+        ],
+        "genre":  ["Acción", "shooter"],
+        "mode": "Multiplayer online"
       },
       {
-          "id": 3,
-          "title": "Indiana Jones y el Gran Circulo",
-          "rating": {
-              "stars": "★★★★☆",
-              "reviews": 150
-          },
-          "images": {
-              "main": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg",
-              "gallery": [
-                    "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg",
-                  "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-1.jpg",
-                  "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-2.jpg",
-                  "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-3.jpg",
-                  "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "39.99€",
-              "discount_price": "36.79€",
-              "discount_percentage": "-8%"
-          },
-          "platforms": ["Windows", "PlayStation", "Xbox"],
-          "description": "Únete a Indiana Jones en una aventura llena de misterio, acción y exploración en este emocionante juego.",
-          "features": [
-              "Historia original basada en la franquicia de Indiana Jones.",
-              "Exploración de mundos exóticos.",
-              "Puzzles desafiantes y combates intensos.",
-              "Gráficos de alta calidad y efectos visuales realistas."
-          ],
-          "video": {
-              "mp4": "/videos/indiana-jones-y-el-gran-circulo-pc-juego-steam-preview.mp4",
-              "webm": "/videos/indiana-jones-y-el-gran-circulo-pc-juego-steam-preview.webm"
-          },
-          "editions": [
-            {
-              "price": "44.19",
-              "price_eur": "44.19",
-              "retail": "60",
-              "name": "Indiana Jones y el Gran Círculo",
-              "editionName": "Standard Edición - Europe",
-              "editionDetails": [
-                "Indiana Jones y el Gran Círculo"
-              ],
-              "retailPrice": "99.99€",
-              "discountedPrice": "89.99€",
-              "discountPercent": "-26%",
-              "image": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg"
-            },
-            {
-              "price": "52.49",
-              "price_eur": "52.49",
-              "retail": "70",
-              "name": "Indiana Jones y el Gran Círculo",
-              "editionName": "Premium Edition - Europe",
-              "editionDetails": [
-                "Indiana Jones y el Gran Círculo",
-                "Expansión de historia Indiana Jones y el Gran...",
-                "Libro de ilustraciones digital",
-                "Vestimenta El templo maldito"
-              ],
-              "retailPrice": "70€",
-              "discountedPrice": "52.49€",
-              "discountPercent": "-15%",
-              "image": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-premium-edition-pc-xbox-series-x-s-premium-edition-xbox-series-x-s-pc-juego-microsoft-store-cover.jpg"
-            }
+        "id": 2,
+        "title": "Path Of Exile 2",
+        "rating": {
+          "stars": "★★★★☆",
+          "reviews": 180
+        },
+        "images": {
+          "main": "/img/pathOfExile/path-of-exile-2-pc-juego-cover.jpg",
+          "gallery": [
+            "/img/pathOfExile/path-of-exile-2-pc-juego-cover.jpg",
+            "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-1.jpg",
+            "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-2.jpg",
+            "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-3.jpg",
+            "/img/pathOfExile/path-of-exile-2-pc-juego-steam-wallpaper-4.jpg"
           ]
+        },
+        "pricing": {
+          "original_price": "99.99€",
+          "discount_price": "91.99€",
+          "discount_percentage": "-8%"
+        },
+        "platforms": ["Windows", "MacOS", "Xbox"],
+        "description": "Path Of Exile 2 es un RPG de acción que expande el universo del original con nuevas mecánicas y una historia emocionante.",
+        "features": [
+          "Sistema de habilidades complejo.",
+          "Mundo abierto lleno de secretos.",
+          "Modo cooperativo para hasta 6 jugadores.",
+          "Gráficos mejorados y efectos visuales impresionantes."
+        ],
+        "video": {
+          "mp4": "/videos/path-of-exile-2-pc-juego-preview.mp4",
+          "webm": "/videos/path-of-exile-2-pc-juego-preview.webm"
+        },
+        "genre": ["RPG", "Aventura", "Acción"],
+        "mode": "Co-op online"
       },
       {
-          "id": 4,
-          "title": "Hogwarts Legacy",
-          "rating": {
-              "stars": "★★★★★",
-              "reviews": 300
+        "id": 3,
+        "title": "Indiana Jones y el Gran Circulo",
+        "rating": {
+          "stars": "★★★★☆",
+          "reviews": 150
+        },
+        "images": {
+          "main": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg",
+          "gallery": [
+            "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg",
+            "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-1.jpg",
+            "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-2.jpg",
+            "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-3.jpg",
+            "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-pc-juego-steam-wallpaper-4.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "39.99€",
+          "discount_price": "36.79€",
+          "discount_percentage": "-8%"
+        },
+        "platforms": ["Windows", "PlayStation5", "Xbox"],
+        "description": "Únete a Indiana Jones en una aventura llena de misterio, acción y exploración en este emocionante juego.",
+        "features": [
+          "Historia original basada en la franquicia de Indiana Jones.",
+          "Exploración de mundos exóticos.",
+          "Puzzles desafiantes y combates intensos.",
+          "Gráficos de alta calidad y efectos visuales realistas."
+        ],
+        "video": {
+          "mp4": "/videos/indiana-jones-y-el-gran-circulo-pc-juego-steam-preview.mp4",
+          "webm": "/videos/indiana-jones-y-el-gran-circulo-pc-juego-steam-preview.webm"
+        },
+        "editions": [
+          {
+            "price": "44.19",
+            "price_eur": "44.19",
+            "retail": "60",
+            "name": "Indiana Jones y el Gran Círculo",
+            "editionName": "Standard Edición - Europe",
+            "editionDetails": [
+              "Indiana Jones y el Gran Círculo"
+            ],
+            "retailPrice": "99.99€",
+            "discountedPrice": "89.99€",
+            "discountPercent": "-26%",
+            "image": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo.jpg"
           },
-          "images": {
-              "main": "/img/hogwarts-legacy/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-cover.jpg",
-              "gallery": [
-                    "/img/hogwarts-legacy/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-cover.jpg",
-                  "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-1.jpg",
-                  "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-2.jpg",
-                  "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-3.jpg",
-                  "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "35.61€",
-              "discount_price": "17.80€",
-              "discount_percentage": "-50%"
-          },
-          "platforms": ["Windows", "PlayStation", "Xbox"],
-          "description": "Vive tu propia aventura en el mundo mágico de Harry Potter con Hogwarts Legacy.",
-          "features": [
-              "Mundo abierto en el universo de Harry Potter.",
-              "Personalización de personajes y habilidades mágicas.",
-              "Historia original con decisiones que afectan el desarrollo.",
-              "Gráficos impresionantes y detalles mágicos."
-          ],
-          "video": {
-              "mp4": "/videos/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-preview.mp4",
-              "webm": "/videos/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-preview.webm"
+          {
+            "price": "52.49",
+            "price_eur": "52.49",
+            "retail": "70",
+            "name": "Indiana Jones y el Gran Círculo",
+            "editionName": "Premium Edition - Europe",
+            "editionDetails": [
+              "Indiana Jones y el Gran Círculo",
+              "Expansión de historia Indiana Jones y el Gran...",
+              "Libro de ilustraciones digital",
+              "Vestimenta El templo maldito"
+            ],
+            "retailPrice": "70€",
+            "discountedPrice": "52.49€",
+            "discountPercent": "-15%",
+            "image": "/img/indiana-jones-y-el-gran-circulo/indiana-jones-y-el-gran-circulo-premium-edition-pc-xbox-series-x-s-premium-edition-xbox-series-x-s-pc-juego-microsoft-store-cover.jpg"
           }
+        ],
+        "genre":  ["Acción", "Aventura"],
+        "mode": "Single player"
       },
       {
-          "id": 5,
-          "title": "Assassin's Creed Shadows",
-          "rating": {
-              "stars": "★★★★★",
-              "reviews": 250
-          },
-          "images": {
-              "main": "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-cover.jpg",
-              "gallery": [
-                    "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-cover.jpg",
-                    "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-1.jpg",
-                   "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-2.jpg",
-                  "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-3.jpg",
-                  "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "39.99€",
-              "discount_price": "35.99€",
-              "discount_percentage": "-10%"
-          },
-          "platforms": ["Windows", "MacOS"],
-          "description": "Assassin's Creed Shadows te lleva a una nueva era de aventuras épicas con gráficos mejorados y nuevas mecánicas.",
-          "features": [
-              "Gráficos de última generación.",
-              "Exploración en un mundo abierto.",
-              "Modo multijugador cooperativo.",
-              "Historia profunda y personajes memorables."
-          ],
-          "video": {
-              "mp4": "/videos/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-preview.mp4",
-              "webm": "/videos/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-preview.webm"
-          }
+        "id": 4,
+        "title": "Hogwarts Legacy",
+        "rating": {
+          "stars": "★★★★★",
+          "reviews": 300
+        },
+        "images": {
+          "main": "/img/hogwarts-legacy/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-cover.jpg",
+          "gallery": [
+            "/img/hogwarts-legacy/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-cover.jpg",
+            "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-1.jpg",
+            "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-2.jpg",
+            "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-3.jpg",
+            "/img/hogwarts-legacy/hogwarts-legacy-xbox-one-xbox-one-juego-microsoft-store-wallpaper-4.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "35.61€",
+          "discount_price": "17.80€",
+          "discount_percentage": "-50%"
+        },
+        "platforms": ["Windows", "PlayStation5", "Xbox"],
+        "description": "Vive tu propia aventura en el mundo mágico de Harry Potter con Hogwarts Legacy.",
+        "features": [
+          "Mundo abierto en el universo de Harry Potter.",
+          "Personalización de personajes y habilidades mágicas.",
+          "Historia original con decisiones que afectan el desarrollo.",
+          "Gráficos impresionantes y detalles mágicos."
+        ],
+        "video": {
+          "mp4": "/videos/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-preview.mp4",
+          "webm": "/videos/hogwarts-legacy-deluxe-edition-deluxe-edition-pc-juego-steam-europe-us-canada-preview.webm"
+        },
+        "genre": ["RPG", "Aventura"],
+        "mode": "Single player"
       },
       {
-          "id": 6,
-          "title": "Black Myth Wukong",
-          "rating": {
-              "stars": "★★★★☆",
-              "reviews": 220
-          },
-          "images": {
-              "main": "/img/black-myth-wukon/black-myth-wukon.jpg",
-              "gallery": [
-                "/img/black-myth-wukon/black-myth-wukon.jpg",
-                  "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-1.jpg",
-                  "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-2.jpg",
-                  "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-3.jpg",
-                  "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "50.99€",
-              "discount_price": "43.34€",
-              "discount_percentage": "-15%"
-          },
-          "platforms": ["Windows", "PlayStation", "Xbox"],
-          "description": "Embárcate en una aventura épica inspirada en la leyenda del Rey Mono con Black Myth Wukong.",
-          "features": [
-              "Combate dinámico y habilidades únicas.",
-              "Mundo abierto lleno de secretos y desafíos.",
-              "Gráficos impresionantes y efectos visuales.",
-              "Historia basada en la mitología china."
-          ],
-          "video": {
-              "mp4": "/videos/black-myth-wukong-pc-juego-steam-europe-us-canada-previewmp4.mp4",
-              "webm": "/videos/black-myth-wukong-pc-juego-steam-europe-us-canada-previewWEBM.webm"
-          }
+        "id": 5,
+        "title": "Assassin's Creed Shadows",
+        "rating": {
+          "stars": "★★★★★",
+          "reviews": 250
+        },
+        "images": {
+          "main": "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-cover.jpg",
+          "gallery": [
+            "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-cover.jpg",
+            "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-1.jpg",
+            "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-2.jpg",
+            "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-3.jpg",
+            "/img/assassin-s-creed-shadows/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-wallpaper-4.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "39.99€",
+          "discount_price": "35.99€",
+          "discount_percentage": "-10%"
+        },
+        "platforms": ["Windows", "MacOS", "PlayStation5", "PlayStation4", "Xbox"],
+        "description": "Assassin's Creed Shadows te lleva a una nueva era de aventuras épicas con gráficos mejorados y nuevas mecánicas.",
+        "features": [
+          "Gráficos de última generación.",
+          "Exploración en un mundo abierto.",
+          "Modo multijugador cooperativo.",
+          "Historia profunda y personajes memorables."
+        ],
+        "video": {
+          "mp4": "/videos/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-preview.mp4",
+          "webm": "/videos/assassin-s-creed-shadows-deluxe-edition-deluxe-edition-pc-juego-ubisoft-connect-preview.webm"
+        },
+        "genre":  ["Acción", "Aventura"],
+        "mode": "Single player"
       },
       {
-          "id": 7,
-          "title": "Microsoft Flight Simulator",
-          "rating": {
-              "stars": "★★★★★",
-              "reviews": 400
-          },
-          "images": {
-              "main": "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-cover.jpg",
-              "gallery": [
-                "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-cover.jpg",
-                  "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft (1).jpg",
-                  "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft (2).jpg",
-                  "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft-sto.jpg",
-                  "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft-store-wallpaper-1.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "47.99€",
-              "discount_price": "43.19€",
-              "discount_percentage": "-10%"
-          },
-          "platforms": ["Windows", "Xbox"],
-          "description": "Experimenta la emoción de volar con Microsoft Flight Simulator, el simulador de vuelo más realista.",
-          "features": [
-              "Gráficos ultra realistas y mapas globales.",
-              "Aviones detallados y sistemas de vuelo realistas.",
-              "Modo multijugador en línea.",
-              "Actualizaciones constantes con nuevos contenidos."
-          ],
-          "video": {
-              "mp4": "/videos/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-preview.mp4",
-              "webm": "/videos/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-preview.webm"
-          }
+        "id": 6,
+        "title": "Black Myth Wukong",
+        "rating": {
+          "stars": "★★★★☆",
+          "reviews": 220
+        },
+        "images": {
+          "main": "/img/black-myth-wukon/black-myth-wukon.jpg",
+          "gallery": [
+            "/img/black-myth-wukon/black-myth-wukon.jpg",
+            "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-1.jpg",
+            "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-2.jpg",
+            "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-3.jpg",
+            "/img/black-myth-wukon/black-myth-wukong-pc-juego-steam-europe-us-canada-wallpaper-4.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "50.99€",
+          "discount_price": "43.34€",
+          "discount_percentage": "-15%"
+        },
+        "platforms": ["Windows", "PlayStation5", "Xbox"],
+        "description": "Embárcate en una aventura épica inspirada en la leyenda del Rey Mono con Black Myth Wukong.",
+        "features": [
+          "Combate dinámico y habilidades únicas.",
+          "Mundo abierto lleno de secretos y desafíos.",
+          "Gráficos impresionantes y efectos visuales.",
+          "Historia basada en la mitología china."
+        ],
+        "video": {
+          "mp4": "/videos/black-myth-wukong-pc-juego-steam-europe-us-canada-previewmp4.mp4",
+          "webm": "/videos/black-myth-wukong-pc-juego-steam-europe-us-canada-previewWEBM.webm"
+        },
+        "genre": ["Acción", "Aventura","RPG"],
+        "mode": "Single player"
       },
       {
-          "id": 8,
-          "title": "Farming Simulator",
-          "rating": {
-              "stars": "★★★★☆",
-              "reviews": 180
-          },
-          "images": {
-              "main": "/img/farming-simulator-25/assetoCorsa.jpg",
-              "gallery": [
-                "/img/farming-simulator-25/assetoCorsa.jpg",
-                  "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-1.jpg",
-                 "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-2.jpg",
-                  "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-3.jpg",
-                  "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-4.jpg"
-              ]
-          },
-          "pricing": {
-              "original_price": "59.99€",
-              "discount_price": "55.19€",
-              "discount_percentage": "-8%"
-          },
-          "platforms": ["Windows", "MacOS"],
-          "description": "Vive la experiencia de la vida rural con Farming Simulator, gestiona tu granja y cultiva tus tierras.",
-          "features": [
-              "Gran variedad de vehículos y herramientas agrícolas.",
-              "Mundo abierto con diferentes tipos de cultivos.",
-              "Modo multijugador cooperativo.",
-              "Gráficos realistas y mecánicas detalladas."
-          ],
-          "video": {
-              "mp4": "/videos/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-preview.mp4",
-              "webm": "/videos/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-preview.webm"
-          }
+        "id": 7,
+        "title": "Microsoft Flight Simulator",
+        "rating": {
+          "stars": "★★★★★",
+          "reviews": 400
+        },
+        "images": {
+          "main": "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-cover.jpg",
+          "gallery": [
+            "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-cover.jpg",
+            "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft (1).jpg",
+            "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft (2).jpg",
+            "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft-sto.jpg",
+            "/img/microsoft-flight-simulator-2024/microsoft-flight-simulator-deluxe-40th-anniversary-edition-pc-xbox-series-x-s-deluxe-40th-anniversary-edition-xbox-series-x-s-pc-juego-microsoft-store-wallpaper-1.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "47.99€",
+          "discount_price": "43.19€",
+          "discount_percentage": "-10%"
+        },
+        "platforms": ["Windows", "Xbox"],
+        "description": "Experimenta la emoción de volar con Microsoft Flight Simulator, el simulador de vuelo más realista.",
+        "features": [
+          "Gráficos ultra realistas y mapas globales.",
+          "Aviones detallados y sistemas de vuelo realistas.",
+          "Modo multijugador en línea.",
+          "Actualizaciones constantes con nuevos contenidos."
+        ],
+        "video": {
+          "mp4": "/videos/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-preview.mp4",
+          "webm": "/videos/microsoft-flight-simulator-2024-pc-xbox-series-x-s-pc-xbox-series-x-s-juego-microsoft-store-preview.webm"
+        },
+        "genre":  ["Simulación"],
+        "mode": "Single player / Online"
+      },
+      {
+        "id": 8,
+        "title": "Farming Simulator",
+        "rating": {
+          "stars": "★★★★☆",
+          "reviews": 180
+        },
+        "images": {
+          "main": "/img/farming-simulator-25/assetoCorsa.jpg",
+          "gallery": [
+            "/img/farming-simulator-25/assetoCorsa.jpg",
+            "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-1.jpg",
+            "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-2.jpg",
+            "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-3.jpg",
+            "/img/farming-simulator-25/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-wallpaper-4.jpg"
+          ]
+        },
+        "pricing": {
+          "original_price": "59.99€",
+          "discount_price": "55.19€",
+          "discount_percentage": "-8%"
+        },
+        "platforms": ["Windows", "MacOS"],
+        "description": "Vive la experiencia de la vida rural con Farming Simulator, gestiona tu granja y cultiva tus tierras.",
+        "features": [
+          "Gran variedad de vehículos y herramientas agrícolas.",
+          "Mundo abierto con diferentes tipos de cultivos.",
+          "Modo multijugador cooperativo.",
+          "Gráficos realistas y mecánicas detalladas."
+        ],
+        "video": {
+          "mp4": "/videos/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-preview.mp4",
+          "webm": "/videos/farming-simulator-25-year-1-bundle-year-1-bundle-pc-mac-juego-steam-preview.webm"
+        },
+        "genre": ["Simulación"],
+        "mode": "Co-op online"
       }
-  ]
-}
+    ]
+  }
+  

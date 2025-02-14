@@ -24,16 +24,15 @@
     ],
     "no-inline-styles": "off",
     "disown-opener": "off",
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "backdrop-filter"
-        ]
-      }
-    ],
+    "compat-api/css": "off",
     "detect-css-reflows/composite": "off",
     "detect-css-reflows/paint": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ]
   }
 }

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>categoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal_style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="header-Footer.css">
+    <link rel="stylesheet" href="categoria.css">
+    <meta name="description" content="Vault Game es el portal definitivo para los amantes de los videojuegos. Descubre ofertas exclusivas, lanzamientos anticipados y descuentos increíbles en títulos para PC, consolas y más. Compra de forma rápida y segura, con entrega inmediata y soporte 24/7. ¡Vive la mejor experiencia gamer con Vault Game!" />
+
+    <!-- Incluir Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body>
+        <!-- Encabezado -->
+        <header class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="/img/logo.png" alt="Logo Tienda"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#tendencias"">Tendencias</a></li>
+                    <li><a href="index.html">Reservas</a></li>
+                    <!-- <li><a href="#">Próximos Lanzamientos</a></li> -->
+                    <li><a href="#">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar juegos...">
+                <button id="search-button">Buscar</button>
+            </div>
+
+            <!-- Contenedor para mostrar los resultados de la búsqueda -->
+            <div id="search-results" class="search-results"></div>
+            <div class="user-actions">
+                <!-- Botón de inicio de sesión antes de autenticarse -->
+                <a href="#" id="open-modal" class="user-link">
+                    <i class="fas fa-user"></i> Iniciar Sesión
+                </a>
+
+                <!-- Contenedor del menú desplegable (solo visible tras login) -->
+                <div id="user-menu" class="hidden">
+                    <button id="user-button" class="user-link">
+                        <i class="fas fa-user"></i> <span id="user-name">Usuario</span> <span class="arrow">▼</span>
+                    </button>
+                    <ul id="user-dropdown" class="dropdown hidden">
+                        <li><a href="/perfil">Ver Perfil</a></li>
+                        <li><a href="/configuracion">Configuración</a></li>
+                        <li><a href="/historial">Historial de Compras</a></li>
+                        <li><button id="logoutBtn"> <i class="fa-solid fa-right-from-bracket" style="
+        margin-right: 5px;"></i>Cerrar Sesión</button></li>
+                    </ul>
+                </div>
+
+                <!-- Carrito de compras (sin cambios) -->
+                <a href="carrito.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> Carrito
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+
+            <div class="hamburger-container">
+                <a href="#" aria-label="Menu-hambuerguesa, consolas" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul id="consolas-menu" class="submenu">
+                    <li><a href="#" aria-label="Para PC">PC</a></li>
+                    <li><a href="#" aria-label="Para PlayStation" >PlayStation</a></li>
+                    <li><a href="#" aria-label="Para Xbox">XBOX</a></li>
+                    <li><a href="#" aria-label="Para Nitendo">Nintendo</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <section class="filters">
+                <div class="sort-by">
+                    <select id="consolas">
+                        <option value="" selected disabled>Consolas</option>
+                        <option value="PlayStation4">PlayStation 4</option>
+                        <option value="PlayStation5">PlayStation 5</option>
+                        <option value="Xbox">Xbox Series X|S</option>
+                        <option value="XboxOne">Xbox one</option>
+                        <option value="Nitendo">Nitendo</option>
+                        <option value="Switch">Switch</option>
+                    </select>
+                </div>
+                <div class="sort-by">
+                    <select id="genero">
+                        <option value="" disabled selected>Genero</option>
+                        <option value="accion">Acción</option>
+                        <option value="name">FPS</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="co-op">Co-op</option>
+                        <option value="simulacion">Simulación</option>
+                        <option value="aventura">Aventura</option>
+                    </select>
+                </div>
+                <div class="sort-by">
+                    <select id="ordenar">
+                        <option value="ordenar" selected disabled>Ordernar por:</option>
+                        <option value="DescuentoMayor">Descuento: Mayor</option>
+                        <option value="DescuentoMenor">Descuento: Menor</option>
+                        <option value="Precio">Precio: Mayor a Menor</option>
+                    </select>
+                </div>
+                <div class="search-button">
+                    <button id="search-button" class="search-Categoria">Buscar</button>
+                    <button class="reset-filters">Reiniciar los filtros</button>
+                </div>
+            </section>
+            <div class="result-container">
+                <!-- Aquí se insertará el encabezado (result-header) -->
+                <div class="tendencias" id="tendencias-categoria">
+                    <!-- Juegos filtrados se renderizan aquí -->
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal" id="myModal">
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close-btn" id="close-modal">&times;</span>
+
+            <!-- Contenedor de formularios e imagen -->
+            <div class="forms-wrapper" id="formsWrapper">
+            <!-- Panel de Login (por defecto visible) -->
+            <div class="form-panel login-panel">
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm" id="noAuth">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="login-username" name="username" placeholder="Usuario" required>
+
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit">Ingresar</button>
+                </form>
+                <div class="toggle-link">
+                ¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a>
+                </div>
+            </div>
+
+            <!-- Panel de Registro (inicialmente oculto) -->
+            <div class="form-panel register-panel">
+                <h2>Registro</h2>
+                <form id="registerForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name"  placeholder="Nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <!-- <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="passwordConfirm" placeholder="Confirmar Contraseña" required>
+                </div> -->
+                <button type="submit">Registrarse</button>
+                </form>
+                <div class="toggle-link">
+                ¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia Sesión</a>
+                </div>
+            </div>
+
+            <!-- Contenedor de la imagen decorativa -->
+            <div class="image-container">
+                <img src="/img/Doom_Slayer_from_the_game_DOOM-removebg-preview.png" alt="Imagen decorativa">
+            </div>
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <div class="containerFooter">
+             <div class="row">
+               <div class="footer-col">
+                 <h4>GameVault</h4>
+                 <ul>
+                    <li><a href="#">sobre nosotros</a></li>
+                    <li><a href="#">nuestros servicios</a></li>
+                    <li><a href="#">política de privacidad</a></li>
+                    <li><a href="#">programa de afiliados</a></li>
+                </ul>
+                </div>
+                <!-- <div class="footer-col">
+                    <h4>obtener ayuda</h4>
+                    <ul>
+                        <li><a href="#">preguntas frecuentes</a></li>
+                        <li><a href="#">envíos</a></li>
+                        <li><a href="#">devoluciones</a></li>
+                        <li><a href="#">estado del pedido</a></li>
+                        <li><a href="#">opciones de pago</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                      <a href="https://www.facebook.com" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://x.com"  aria-label="X"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com"  aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="https://es.linkedin.com"  aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+               </div>
+             </div>
+         </footer>
+        <div id="notification-container"></div>
+
+
+            <script src="daniel_app.js"></script>
+        <script>
+            function showNotification(message) {
+            let container = document.getElementById("notification-container");
+
+            // Si el contenedor no existe, créalo y agrégalo al body
+            if (!container) {
+                container = document.createElement("div");
+                container.id = "notification-container";
+                document.body.appendChild(container);
+            }
+
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = message;
+
+            container.appendChild(notification);
+
+            // Remover la notificación después de 3 segundos
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        </script>
+</body>
+</html>

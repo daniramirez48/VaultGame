@@ -1,9 +1,13 @@
-// Crear un archivo authMiddleware.js
+// authMiddleware.js
 const isAuthenticated = (req, res, next) => {
-    if (req.session.user) {
-    next(); // Usuario autenticado
+    if (req.sessions.user) {
+      // El usuario está autenticado, continua con la siguiente función en la cadena de middleware
+      next();
     } else {
-    res.status(401).json({ error: 'No autorizado' });
+      // El usuario no está autenticado, retorna un error 401
+      res.status(401).json({ error: 'No autorizado' });
     }
-    };
-    module.exports = isAuthenticated;
+  };
+  
+  module.exports = isAuthenticated;
+  

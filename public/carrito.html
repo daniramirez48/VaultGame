@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Videojuegos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="modal_style.css">
+    <link rel="stylesheet" href="header-Footer.css">
     <!-- Incluir Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -28,12 +31,30 @@
             <button>Buscar</button>
         </div>
         <div class="user-actions">
-            <a href="#" class="user-link"><i class="fas fa-user"></i> Iniciar Sesión</a>
+            <!-- Botón de inicio de sesión antes de autenticarse -->
+            <a href="#" id="open-modal" class="user-link">
+                <i class="fas fa-user"></i> Iniciar Sesión
+            </a>
+        
+            <!-- Contenedor del menú desplegable (solo visible tras login) -->
+            <div id="user-menu" class="hidden">
+                <button id="user-button" class="user-link">
+                    <i class="fas fa-user"></i> <span id="user-name">Usuario</span> <span class="arrow">▼</span>
+                </button>
+                <ul id="user-dropdown" class="dropdown hidden">
+                    <li><a href="/perfil">Ver Perfil</a></li>
+                    <li><a href="/configuracion">Configuración</a></li>
+                    <li><a href="/historial">Historial de Compras</a></li>
+                    <li><button id="logoutBtn"> <i class="fa-solid fa-right-from-bracket" style="
+    margin-right: 5px;"></i>Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        
+            <!-- Carrito de compras (sin cambios) -->
             <a href="carrito.html" class="cart-link">
                 <i class="fas fa-shopping-cart"></i> Carrito 
                 <span id="cart-count">0</span>
-            </a>
-            
+            </a>     
         </div>
         <div class="hamburger-container">
             <a href="#" id="hamburger-menu">
@@ -47,19 +68,39 @@
             </ul>
         </div>
     </header>
-        <div class="cart-container">
-            <h2>Carrito de Compras</h2>
-            <div id="cart-items"></div>
-            <div class="cart-summary">
-                <h3>Total: <span id="total-price">€0.00</span></h3>
-                <button id="checkout-btn">Pagar</button>
-            </div>
-            <button id="clear-cart">Vaciar Carrito</button>
+    <div class="cart-container">
+        <div class="cart-div">
+          <h2>Carrito de Compras</h2>
+          <div id="empty-cart-message" class="empty-cart-message">
+            <p>Tu carrito está vacío.</p>
+            <a href="index.html" class="discover-games-link">Descubre juegos</a>
+          </div>
+          <div id="cart-items">
+            <!-- Los productos se añadirán aquí dinámicamente -->
+          </div>
         </div>
-    <footer>
-        <p>examen de dani</p>
-    </footer>
+        <div class="cart-summary">
+          <h3>Resumen de la Compra</h3>
+          <p>Total: <span id="total-price">€0.00</span></p>
+          <button id="checkout-btn">Pagar</button>
+          <button id="clear-cart">Vaciar Carrito</button>
+        </div>
+      </div>
     <script src="daniel_app.js"></script>
+    <!-- <script src="login.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const consolasMenu = document.getElementById('consolas-menu');
+
+            hamburgerMenu.addEventListener('click', function() {
+                consolasMenu.classList.toggle('show');
+            });
+        });
+
+        let currentIndex = 0;
+    </script>    
+
 </body>
 </html>
 <!-- daniel ramirez -->

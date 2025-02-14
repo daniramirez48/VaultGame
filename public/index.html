@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="modal_style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="header-Footer.css">
+    <meta name="description" content="Vault Game es el portal definitivo para los amantes de los videojuegos. Descubre ofertas exclusivas, lanzamientos anticipados y descuentos increíbles en títulos para PC, consolas y más. Compra de forma rápida y segura, con entrega inmediata y soporte 24/7. ¡Vive la mejor experiencia gamer con Vault Game!" />
+
     <!-- Incluir Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -23,33 +25,54 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#tendencias"">Tendencias</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Próximos Lanzamientos</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="categoria.html">Categorías</a></li>
                 <li><a href="#">Soporte</a></li>
             </ul>
         </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Buscar juegos...">
-            <button>Buscar</button>
+            <input type="text" id="search-input" placeholder="Buscar juegos...">
+            <button id="search-button">Buscar</button>
         </div>
+        
+        <!-- Contenedor para mostrar los resultados de la búsqueda -->
+        <div id="search-results" class="search-results"></div>
         <div class="user-actions">
-            <a href="#" id="open-modal" class="user-link"><i class="fas fa-user"></i> Iniciar Sesión</a>
-            <button id="logoutBtn" style="display: none;">Cerrar Sesión</button>
+            <!-- Botón de inicio de sesión antes de autenticarse -->
+            <a href="#" id="open-modal" class="user-link">
+                <i class="fas fa-user"></i> Iniciar Sesión
+            </a>
+        
+            <!-- Contenedor del menú desplegable (solo visible tras login) -->
+            <div id="user-menu" class="hidden">
+                <button id="user-button" class="user-link">
+                    <i class="fas fa-user"></i> <span id="user-name">Usuario</span> <span class="arrow">▼</span>
+                </button>
+                <ul id="user-dropdown" class="dropdown hidden">
+                    <li><a href="/perfil">Ver Perfil</a></li>
+                    <li><a href="/configuracion">Configuración</a></li>
+                    <li><a href="/historial">Historial de Compras</a></li>
+                    <li><button id="logoutBtn"> <i class="fa-solid fa-right-from-bracket" style="
+    margin-right: 5px;"></i>Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        
+            <!-- Carrito de compras (sin cambios) -->
             <a href="carrito.html" class="cart-link">
                 <i class="fas fa-shopping-cart"></i> Carrito 
                 <span id="cart-count">0</span>
-            </a>
-            
+            </a>     
         </div>
+        
         <div class="hamburger-container">
-            <a href="#" id="hamburger-menu">
+            <a href="#" aria-label="Menu-hambuerguesa, consolas" id="hamburger-menu">
                 <i class="fas fa-bars"></i>
             </a>
             <ul id="consolas-menu" class="submenu">
-                <li><a href="#">PC</a></li>
-                <li><a href="#">PlayStation</a></li>
-                <li><a href="#">XBOX</a></li>
-                <li><a href="#">Nintendo</a></li>
+                <li><a href="#" aria-label="Para PC">PC</a></li>
+                <li><a href="#" aria-label="Para PlayStation" >PlayStation</a></li>
+                <li><a href="#" aria-label="Para Xbox">XBOX</a></li>
+                <li><a href="#" aria-label="Para Nitendo">Nintendo</a></li>
             </ul>
         </div>
     </header>
@@ -141,7 +164,7 @@
             </div>
         </div>
     </section>
-    <div class="containerReserva">
+    <div class="containerReserva" id="reservas">
         <a href="" class="reserva-link"><h2>Reservas</h2></a>
         <div class="reservas">
             <div class="juegoNew">
@@ -263,7 +286,7 @@
     <div class="categories-container">
         <div class="headline visual-compensation">
             <h2>Categorías</h2>
-            <a class="button button-secondary show-more-categories" href="#">Ver todo</a>
+            <a class="button button-secondary show-more-categories" href="categoria.html">Ver todo</a>
         </div>
         <div class="listing-items higher listing-categories listing-slider">
             <!-- Lista de categorías -->
@@ -334,78 +357,81 @@
                     <span class="details">¡Y sé el primero en recibir nuestras ofertas privadas, newsletters y promociones de la semana!</span>
                 </div>
             </div>
-            <a href="#" class="button">
-                    ¡Suscríbete!
-            </a>
+            <!-- <a id="open-modal" class="button">
+                    ¡Suscríbete! -->
+                    <a href="#" id="open-modal" class="button">
+                        ¡Suscríbete!
+                    </a>
+            <!-- </a> -->
         </div>
     </div>
 
-<!-- Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-content">
-    <!-- Botón para cerrar el modal -->
-    <span class="close-btn" id="close-modal">&times;</span>
+            <!-- Modal -->
+            <div class="modal" id="myModal">
+            <div class="modal-content">
+                <!-- Botón para cerrar el modal -->
+                <span class="close-btn" id="close-modal">&times;</span>
 
-    <!-- Contenedor de formularios e imagen -->
-    <div class="forms-wrapper" id="formsWrapper">
-      <!-- Panel de Login (por defecto visible) -->
-      <div class="form-panel login-panel">
-        <h2>Iniciar Sesión</h2>
-        <form id="loginForm" id="noAuth">
-          <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="login-username" name="username" placeholder="Usuario" required>
-    
-          </div>
-          <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
-          </div>
-          <button type="submit">Ingresar</button>
-        </form>
-        <div class="toggle-link">
-          ¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a>
-        </div>
-      </div>
+                <!-- Contenedor de formularios e imagen -->
+                <div class="forms-wrapper" id="formsWrapper">
+                <!-- Panel de Login (por defecto visible) -->
+                <div class="form-panel login-panel">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="loginForm" id="noAuth">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="login-username" name="username" placeholder="Usuario" required>
+                
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit">Ingresar</button>
+                    </form>
+                    <div class="toggle-link">
+                    ¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a>
+                    </div>
+                </div>
 
-      <!-- Panel de Registro (inicialmente oculto) -->
-      <div class="form-panel register-panel">
-        <h2>Registro</h2>
-        <form id="registerForm">
-          <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="name" name="name"  placeholder="Nombre completo" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" id="email" name="email" placeholder="Correo electronico" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
-          </div>
-          <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="password" name="password" placeholder="Contraseña" required>
-          </div>
-          <!-- <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="passwordConfirm" placeholder="Confirmar Contraseña" required>
-          </div> -->
-          <button type="submit">Registrarse</button>
-        </form>
-        <div class="toggle-link">
-          ¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia Sesión</a>
-        </div>
-      </div>
+                <!-- Panel de Registro (inicialmente oculto) -->
+                <div class="form-panel register-panel">
+                    <h2>Registro</h2>
+                    <form id="registerForm">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name"  placeholder="Nombre completo" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <!-- <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="passwordConfirm" placeholder="Confirmar Contraseña" required>
+                    </div> -->
+                    <button type="submit">Registrarse</button>
+                    </form>
+                    <div class="toggle-link">
+                    ¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia Sesión</a>
+                    </div>
+                </div>
 
-      <!-- Contenedor de la imagen decorativa -->
-      <div class="image-container">
-        <img src="/img/Doom_Slayer_from_the_game_DOOM-removebg-preview.png" alt="Imagen decorativa">
-      </div>
-    </div>
-  </div>
-</div>
+                <!-- Contenedor de la imagen decorativa -->
+                <div class="image-container">
+                    <img src="/img/Doom_Slayer_from_the_game_DOOM-removebg-preview.png" alt="Imagen decorativa">
+                </div>
+                </div>
+            </div>
+            </div>
 
     <footer class="footer">
         <div class="containerFooter">
@@ -432,10 +458,10 @@
             <div class="footer-col">
                 <h4>follow us</h4>
                 <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://x.com"  aria-label="X"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com"  aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://es.linkedin.com"  aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>            
            </div>

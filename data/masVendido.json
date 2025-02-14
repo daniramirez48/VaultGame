@@ -1,6 +1,5 @@
- {
-  "loMasVendido":
-  [
+{
+  "loMasVendido": [
     {
       "id": 9,
       "title": "Call of Duty Black Ops 6 (PS5)",
@@ -26,7 +25,9 @@
         "Modo campaña intenso y cinemático.",
         "Modo multijugador con mapas y modos nuevos.",
         "Gráficos de nueva generación."
-      ]
+      ],
+      "genre": "FPS / Shooter",
+      "mode": "Multiplayer online"
     },
     {
       "id": 10,
@@ -53,7 +54,9 @@
         "Amplio mundo abierto con exploración libre.",
         "Diversos modos de juego incluyendo cooperativo y PvP.",
         "Personalización avanzada de personajes."
-      ]
+      ],
+      "genre": "Action RPG / Hack and Slash",
+      "mode": "Co-op online"
     },
     {
       "id": 11,
@@ -80,7 +83,9 @@
         "Modo cooperativo obligatorio con mecánicas únicas.",
         "Narrativa emocionante y conmovedora.",
         "Variedad de escenarios y mecánicas de juego."
-      ]
+      ],
+      "genre": "Co-op Adventure",
+      "mode": "Local Co-op"
     },
     {
       "id": 12,
@@ -142,7 +147,9 @@
           "discountPercent": "-25%",
           "image": "https://gaming-cdn.com/images/products/18620/380x218/marvel-s-spider-man-2-digital-deluxe-edition-digital-deluxe-edition-pc-juego-steam-europe-cover.jpg?v=1738253800"
         }
-      ]
+      ],
+      "genre": "Action / Adventure",
+      "mode": "Single player"
     }
   ]
 }

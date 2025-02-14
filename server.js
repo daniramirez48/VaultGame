@@ -1,52 +1,50 @@
-const https = require('http');
-const fs = require('fs');
-const path = require('path');
+// server.js
+
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
+const path = require('path');
 const db = require('./database'); // Archivo de conexión a la base de datos
-
-const app = express();
-const port = process.env.PORT || 3002; // Asegurar que usa el puerto de Render
-const saltRounds = 10; // 🔹 Agregado para bcrypt
-
 const session = require('express-session');
 const SQLiteStore = require('connect-sqlite3')(session);
+const isAuthenticated = require('./authMiddleware');  // Asegúrate de que la ruta sea correcta
 
-// Opciones para HTTPS
-// const options = {
-//   key: fs.readFileSync('key.pem'),
-//   cert: fs.readFileSync('cert.pem'),
-// };
+const app = express();
+const port = process.env.PORT || 3002; // Usa el puerto asignado por el entorno o 3002
+const saltRounds = 10; // Para bcrypt
+
+// Middlewares
 app.use(express.json());
-// Configurar middleware
-app.use(cors());
-app.use(express.json());
-//Configurar sesiones
+app.use(cors({
+  origin: true,       // Permite peticiones desde cualquier origen o especifica la URL de tu front-end
+  credentials: true   // Permite el envío y recepción de cookies (sesiones)
+}));
+
+// Configurar sesiones (este middleware DEBE estar antes de definir las rutas)
 app.use(session({
   store: new SQLiteStore({ db: 'sessions.db' }), // Almacenar sesiones en SQLite
-  secret:'supersecret',
+  secret: 'supersecret',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure : false, // true en producción
+    secure: false, // En producción, si usas HTTPS, ponlo en true
     maxAge: 1000 * 60 * 60 * 24 // 24 horas
   }
 }));
 
-//Añado este endpoint para poder indicar el nombre del usuario
+// Endpoint para obtener el perfil del usuario (desde la sesión)
 app.get('/api/perfil', (req, res) => {
   if (req.session.user) {
-  res.json(req.session.user);
+    res.json(req.session.user);
   } else {
-  res.json({});
+    res.json({});
   }
-  });
-  
-// Servir archivos estáticos
+});
+
+// Servir archivos estáticos (por ejemplo, tu frontend)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rutas para archivos JSON
+// Rutas para archivos JSON (si los usas)
 app.get('/games.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'data', 'games.json'));
 });
@@ -56,27 +54,30 @@ app.get('/data/masVendido.json', (req, res) => {
 app.get('/data/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'data', req.params[0]));
 });
-// Ruta principal
+
+// Ruta principal (index.html)
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Ruta protegida (accesible solo si el usuario está autenticado)
+app.get('/ruta-protegida', isAuthenticated, (req, res) => {
+  res.json({ message: 'Esta es una ruta protegida y solo se puede acceder si estás autenticado.' });
+});
 
 // 🚀 Ruta para registrar usuarios
 app.post('/users2', async (req, res) => {
   try {
-    const {name, username, email, password } = req.body;
+    const { name, username, email, password } = req.body;
 
     if (!username || !email || !password) {
       return res.status(400).json({ error: 'Todos los campos son obligatorios' });
-      
     }
     
     // Verificar si el usuario ya existe
     db.get('SELECT * FROM users2 WHERE username = ? OR email = ?', [username, email], async (err, row) => {
       if (err) {
-        console.log('Datos recibidos:', {name, username, email, password });
-
+        console.log('Datos recibidos:', { name, username, email, password });
         console.error('Error al buscar el usuario:', err);
         return res.status(500).json({ error: 'Error al buscar el usuario' });
       }
@@ -102,7 +103,6 @@ app.post('/users2', async (req, res) => {
             res.status(201).json({ success: true, message: 'Usuario registrado exitosamente' });
           }
         );
-        // db.close(); // Cierra la conexión después de la consulta        
       } catch (hashError) {
         console.error('Error al encriptar la contraseña:', hashError);
         return res.status(500).json({ error: 'Error al encriptar la contraseña' });
@@ -114,18 +114,20 @@ app.post('/users2', async (req, res) => {
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
+
 // 🚀 Ruta para loguearse (inicio de sesión)
 app.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
 
     // Validar que se proporcionaron los datos necesarios
-    if (!username || !password) {  // Verifica que ambos campos estén presentes
+    if (!username || !password) {
       return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
 
     // Verificar si el usuario existe en la base de datos (por username o email)
-    db.get('SELECT * FROM users2 WHERE username = ? OR email = ?', [username], async (err, row) => {
+    // Usamos [username, username] para que se busque el mismo valor en ambas columnas
+    db.get('SELECT * FROM users2 WHERE username = ? OR email = ?', [username, username], async (err, row) => {
       if (err) {
         console.error('Error al buscar el usuario:', err);
         return res.status(500).json({ error: 'Error al buscar el usuario' });
@@ -137,25 +139,24 @@ app.post('/login', async (req, res) => {
 
       // Comparar la contraseña proporcionada con la almacenada (encriptada)
       const isMatch = await bcrypt.compare(password, row.password);
-      
       if (!isMatch) {
         return res.status(400).json({ error: 'Usuario o contraseña incorrectos' });
       }
 
       console.log('Usuario logueado:', row.username);
 
-      // **Asignar el usuario a la sesión**
+      // Asignar el usuario a la sesión
       req.session.user = {
         name: row.name,         // Se asume que la columna se llama "name"
         username: row.username,
-        email: row.email        // Puedes agregar otros datos si lo deseas
+        email: row.email
       };
    
-      // Aquí se incorpora el nombre del usuario en la respuesta
+      // Responder con éxito e incluir el nombre del usuario
       res.status(200).json({ 
         success: true, 
         message: 'Inicio de sesión exitoso', 
-        name: row.name  // Se asume que la columna en la tabla es "name"
+        name: row.name  
       });
     });
 
@@ -172,17 +173,11 @@ app.get('/logout', (req, res) => {
       console.error('Error al cerrar la sesión:', err);
       return res.status(500).json({ error: 'No se pudo cerrar la sesión' });
     }
-    // Limpia la cookie asociada a la sesión, por defecto suele ser "connect.sid"
+    // Limpia la cookie asociada a la sesión (por defecto "connect.sid")
     res.clearCookie('connect.sid');
     res.json({ success: true, message: 'Sesión cerrada exitosamente' });
   });
 });
 
-// Iniciar servidor HTTPS
-app.listen(port, () => {
-  console.log(`Servidor corriendo en http://0.0.0.0:${port}`);
-});
-
- 
-
-
+// Iniciar el servidor
+app.listen(port, () => console.log(`Servidor corriendo en http://localhost:${port}`));
